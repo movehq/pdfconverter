@@ -7,13 +7,13 @@ MoveHQ PDF Converter is a tool written in NodeJS utilizing Docker that allows yo
 `docker pull movehq/pdfconverter:latest`
 
 ## Running the Container
-`docker run -v $yoursavedirectory:/print -e source=$urltoconvert -e destination=$filename movehq/pdfconverter:latest`
+`docker run -v $yoursavedirectory:/prints -e source=$urltoconvert -e destination=$filename movehq/pdfconverter:latest`
 
-**\$yoursavedirectory** = The directory you want to save you pdf in. Note that you should **not** change the `:/print` portion.  
+**\$yoursavedirectory** = The directory you want to save you pdf in. Note that you should **not** change the `:/prints` portion.  
 **\$urltoconvert** = The url, including http:// or https://, you wish to convert to a PDF.  
 **\$filename** = the name of the file you wish to save, this is optional will save as google.pdf if not included.
 
 example:
-`docker run -v $PWD/print:/print -e source=https://www.movehq.com/ -e destination=movehq movehq/pdfconverter:latest`
+`docker run -v $PWD/print:/prints -e source=https://www.movehq.com/ -e destination=movehq movehq/pdfconverter:latest`
 
 #####  Released under MIT license.
