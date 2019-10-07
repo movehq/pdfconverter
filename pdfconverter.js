@@ -11,12 +11,14 @@ const createPdf = async() => {
     await page.pdf({
       path: "/prints/"+process.env.destination+".pdf",
       printBackground: true,
-      format: 'Letter',
+      // format: 'Letter',
+      width: 816,
+      height: 1056,
       margin: {
-      	top: 20,
-      	bottom: 18,
-      	left: 18,
-      	right: 18
+      	top: 24,
+      	bottom: 24,
+      	left: 24,
+      	right: 24
       }
     });
   } catch (err) {
