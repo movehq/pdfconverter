@@ -10,7 +10,7 @@ const createPdf = async() => {
     await page.goto(process.env.source, {waitUntil: 'networkidle2'});
     await page.pdf({
       path: "/prints/"+process.env.destination+".pdf",
-      printBackground: 'True',
+      printBackground: true,
       format: 'Letter',
       margin: {
       	top: 20,
