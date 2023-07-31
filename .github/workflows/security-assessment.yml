@@ -1,0 +1,10 @@
+name: SECURITY_ASSESSMENT
+
+on:
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+  notify_security:
+    uses: movehq/.github/.github/workflows/security_assessment.yaml@v2
+    secrets: inherit
