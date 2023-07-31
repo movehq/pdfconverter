@@ -1,0 +1,9 @@
+name: CHANGE_ASSESSMENT
+
+on:
+  pull_request:
+    types: [ opened ]
+
+jobs:
+  add_label:
+    uses: movehq/.github/.github/workflows/change_assessment.yaml@v2
